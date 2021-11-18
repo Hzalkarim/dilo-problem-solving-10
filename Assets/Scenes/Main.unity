@@ -741,6 +741,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   rb: {fileID: 1717018156}
+  inputType: 0
+  mainCamera: {fileID: 519420031}
 --- !u!50 &1717018156
 Rigidbody2D:
   serializedVersion: 4
