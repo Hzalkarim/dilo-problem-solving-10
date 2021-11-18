@@ -653,8 +653,8 @@ GameObject:
   - component: {fileID: 1717018154}
   - component: {fileID: 1717018153}
   - component: {fileID: 1717018156}
-  - component: {fileID: 1717018155}
   - component: {fileID: 1717018157}
+  - component: {fileID: 1717018155}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -736,12 +736,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1717018152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 529edffb8c785f341bf97780f8bf1ba2, type: 3}
+  m_Script: {fileID: 11500000, guid: c01a6e796d55317418c209ba5eb13cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 100
   rb: {fileID: 1717018156}
-  force: 5
-  direction: {x: 1, y: 0.5, z: 0}
 --- !u!50 &1717018156
 Rigidbody2D:
   serializedVersion: 4
