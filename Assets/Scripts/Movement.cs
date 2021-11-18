@@ -5,11 +5,11 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float speed;
+    public float force;
     public Vector3 direction;
 
-    void FixedUpdate()
+    void Start()
     {
-        rb.MovePosition(transform.position + (direction * speed * Time.deltaTime));
+        rb.AddForce(transform.position + (direction * force), ForceMode2D.Impulse);
     }
 }
