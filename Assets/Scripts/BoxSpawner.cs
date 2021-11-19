@@ -11,6 +11,9 @@ public class BoxSpawner : MonoBehaviour
     [Space]
     public Transform player;
 
+    public CollectibleSpawner colSpawner;
+    public ChargeRandomizer charger;
+
     private float nextSpawn;
 
     private void Start()
@@ -29,15 +32,16 @@ public class BoxSpawner : MonoBehaviour
                 rndPos = GetRandomPos();
             }
 
-            Instantiate(boxPrefabs, rndPos, Quaternion.identity, transform);
+            var go = Instantiate(boxPrefabs, rndPos, Quaternion.identity, transform);
             nextSpawn = spawnInterval;
+
+            colSpawner.OnBoxSpawned(go.transform);
+            charger.OnBoxSpawned(go.GetComponent<Charge>());
         }
     }
 
     private Vector3 GetRandomPos()
     {
-        var box = Instantiate(boxPrefabs, transform);
-
         float x = Random.Range(-arenaSizeFromCenter.x, arenaSizeFromCenter.x);
         float y = Random.Range(-arenaSizeFromCenter.y, arenaSizeFromCenter.y);
         return new Vector3(x, y);
