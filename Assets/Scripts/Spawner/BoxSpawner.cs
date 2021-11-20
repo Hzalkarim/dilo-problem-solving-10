@@ -35,8 +35,8 @@ public class BoxSpawner : MonoBehaviour
             var go = Instantiate(boxPrefabs, rndPos, Quaternion.identity, transform);
             nextSpawn = spawnInterval;
 
-            colSpawner.OnBoxSpawned(go.transform);
-            charger.OnBoxSpawned(go.GetComponent<Charge>());
+            colSpawner?.OnBoxSpawned(go.transform);
+            charger?.OnBoxSpawned(go.GetComponent<Charge>());
         }
     }
 

@@ -12,7 +12,8 @@ public class Collectibles : MonoBehaviour
         var coll = collision.gameObject.GetComponent<Collector>();
         if (coll != null)
         {
-            Destroy(posConstraint.GetSource(0).sourceTransform.gameObject);
+            if (posConstraint != null)
+                Destroy(posConstraint.GetSource(0).sourceTransform.gameObject);
             Destroy(gameObject);
             coll.OnCollect();
         }

@@ -25,6 +25,7 @@ public class InputMovement : MonoBehaviour
         if (inputType == InputType.Keyboard)
         {
             MoveInputKeyboard();
+            startMove = false;
         }
         else if (inputType == InputType.Mouse)
         {
