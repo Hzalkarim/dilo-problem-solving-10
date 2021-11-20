@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  pointIncrement: 4
+  pointIncrement: 2
 --- !u!61 &2910326101228596972
 BoxCollider2D:
   m_ObjectHideFlags: 0
